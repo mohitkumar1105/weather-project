@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    background-image: url(images/pexels-jplenio-1423601.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tab.current-bg{
+    background-color: gray;
+    border-radius: 10px;
+}
+#grant-location{
+    visibility: visible;
+}
+#searching-area{
+    display: none;
+}
+#weather-information{
+    display: none;
+}
+.loading{
+    visibility: hidden;
+}
+
+
+
+
+.loading.active{
+    display: block;
+
+}
+#searching-area.active{
+   display: block;
+}
+#grant-location.active{
+  display: block;
+}
+#weather-information.active{
+    display: block;
+}

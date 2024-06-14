@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+
+    <div class="main justify-content-center align-items-center" id="background"
+        style="width: 100%; height: 100vh; overflow: hidden; color: black; padding: 100px;">
+        <div style="height: 50vh; position: relative;">
+            <h2 class="text-center mb-3 border-0">WEATHER APP</h2>
+
+            <div class="d-flex justify-content-around align-items-center mb-5 mt-5">
+                <button class="border-0 px-3 py-2 tab" id="user-tab" style="outline: none; border: none; ">Your
+                    Weather</button>
+                <button class="border-0 px-3 py-2 tab" id="search-tab" style="outline: none; ">search Weather</button>
+            </div>
+
+
+            <!-- weather information ..................................................... -->
+
+
+            <div id="weather-container">
+
+
+                <div class="text-center" id="weather-information">
+                    <div>
+                     
+                        <h4 id="city" class="mb-3"></h4>
+                        <img id="country-flag" src="images/india.png" width="30" height="30">
+                   
+                        <h4 id="desc" class="mb-3"></h4>
+                        <i class="bi bi-cloud-haze2-fill" style="color: rgb(188, 21, 116); "></i>
+
+                        <h4 id="temp" class="mb-3"></h4>
+
+                        <div class="row mt-5" style="color: #fff;">
+                            <div class="col-lg-4 col-md-4 border py-3 px-1 "
+                                style="background-color: rgb(117, 93, 93);">
+                                <h5>WINDSPEED</h5>
+                                <i class="bi bi-tornado" style="color: yellow;"></i>
+                                <h4 id="wind-speed"></h4>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 border py-3 px-1" style="background-color: rgb(117, 93, 93);">
+                                <h5>HUMIDITY</h5>
+                                <i class="bi bi-cloud-lightning-rain" style="color: yellow;"></i>
+                                <h4 id="humidity"></h4>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 border py-3 px-1" style="background-color: rgb(117, 93, 93);">
+                                <h5>CLOUDS</h5>
+                                <i class="bi bi-cloud-drizzle" style="color: yellow;"></i>
+                                <h4 id="clouds"></h4>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- loading area.................................. -->
+
+                <div class="loading position-absolute" id="loading"
+                    style="visibility:hidden; top: 200px; ;left: 600px;">
+                    <img src="images/Spinner-3-unscreen.gif" width="150" height="150;">
+                    <p class="text-center">Loading....</p>
+
+                </div>
+
+
+
+                <!-- search area .................... -->
+
+
+                <div class="position-absolute mt-4" id="searching-area" style=" top: 150px; left: 250px;">
+                    <input id="search-city" type="text"  class="w-100 p-1">
+                    <button type="submit" class="search-icon position-absolute" id="icon-btn"
+                        style="right: 10px; top: 5px; cursor: pointer;"><i class="bi bi-search"></i></button>
+                </div>
+
+
+
+                <!-- grant location .........................................................-->
+
+
+                <div id="grant-location" class=" row d-flex justify-content-center align-items-center position-absolute"
+                    style=" top:200px; left: 50px;">                    <img src="images/placeholder_819814.png" style="width: 20%;">
+                    <h3 class="text-center">Grant Location Access</h3>
+                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur .</p>
+                    <button id="grant-access" class="w-25 p-2">Grant Access</button>
+
+
+                </div>
+
+
+            </div>
+
+
+            <!-- .......................................................  -->
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
